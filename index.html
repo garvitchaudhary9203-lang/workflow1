@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Smart Irrigation System Workflow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .instruction {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .phase-box {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer; /* This makes the cursor a pointer */
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+        .phase-box h2 {
+            margin: 0;
+            padding: 15px;
+            background: #ecf0f1;
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            transition: background 0.3s ease;
+        }
+        .phase-box:hover h2 {
+            background: #d0e0e3; /* Changes background color on hover */
+        }
+        .phase-box:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow on hover */
+        }
+        .phase-details {
+            display: none;
+            padding: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #fff;
+            margin-bottom: 10px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        .graph-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .graph-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI-Powered Smart Irrigation System Workflow</h1>
+
+        <div class="graph-container">
+            <p>Visual representation of the project workflow:</p>
+            <img src="c:\Users\AVITA\Downloads\WhatsApp Image 2025-08-21 at 21.18.01_57725b68.jpg" alt="AI-Powered Smart Irrigation System Workflow Graph">
+        </div>
+        
+        <p class="instruction">Click on a phase to view its details.</p>
+
+        <div class="phase-box">
+            <h2>Phase 1: Research and Planning</h2>
+            <div class="phase-details">
+                <ul>
+                    <li><strong>Define System Requirements:</strong> Detail the specific hardware (sensors, microcontroller, pump) and software (AI model, cloud services) needed.</li>
+                    <li><strong>Technology Stack Selection:</strong> Choose the appropriate platforms. This includes the microcontroller (e.g., Raspberry Pi, Arduino), programming languages (e.g., Python for AI, JavaScript for the web app), and cloud provider (e.g., AWS, Google Cloud).</li>
+                    <li><strong>Dataset Acquisition:</strong> Determine the sources for training your AI model. You'll need historical data on soil moisture, weather, and crop water usage.</li>
+                    <li><strong>Project Timeline:</strong> Create a Gantt chart or a simple timeline to show the estimated duration for each phase, from development to testing.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="phase-box">
+            <h2>Phase 2: Hardware and Software Development</h2>
+            <div class="phase-details">
+                <ul>
+                    <li><strong>Hardware Prototyping:</strong> Assemble the IoT sensor module. Connect soil moisture and temperature sensors to the microcontroller and ensure they can transmit data.</li>
+                    <li><strong>AI Model Development:</strong> Build and train the AI model. This is where you'll use the collected data to create a model that predicts optimal watering times and amounts.</li>
+                    <li><strong>Cloud Infrastructure Setup:</strong> Set up the cloud services for data storage (e.g., a database) and analytics. This is where your sensor data will be stored and processed.</li>
+                    <li><strong>Pump Control Logic:</strong> Write the code that will use the AI's prediction to trigger the water pump. Include safety measures to prevent malfunctions.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="phase-box">
+            <h2>Phase 3: Integration and Testing</h2>
+            <div class="phase-details">
+                <ul>
+                    <li><strong>System Integration:</strong> Connect all the components. Ensure the sensor data flows from the microcontroller to the cloud, the AI model processes it correctly, and the signal for the pump is sent and received.</li>
+                    <li><strong>Unit and Integration Testing:</strong> Test each component individually and as a complete system. Ensure data is accurate, the pump activates as expected, and the mobile app receives correct information.</li>
+                    <li><strong>Farmer Interface Development:</strong> Build the user-friendly mobile or web application. It should display real-time data and allow farmers to control the system remotely.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="phase-box">
+            <h2>Phase 4: Deployment and Monitoring</h2>
+            <div class="phase-details">
+                <ul>
+                    <li><strong>Pilot Deployment:</strong> Install the system in a controlled environment or on a small section of a farm for a pilot test.</li>
+                    <li><strong>Data Analysis:</strong> Use the data gathered during the pilot to evaluate the system's effectiveness in saving water and improving crop yield.</li>
+                    <li><strong>System Refinement:</strong> Based on the pilot results, make any necessary adjustments to the hardware, software, or AI model to improve performance.</li>
+                    <li><strong>Final Documentation:</strong> Compile a comprehensive document that includes the system architecture, code, and user manual.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const phaseBoxes = document.querySelectorAll('.phase-box');
+
+        phaseBoxes.forEach(box => {
+            box.addEventListener('click', () => {
+                const details = box.querySelector('.phase-details');
+                if (details.style.display === 'block') {
+                    details.style.display = 'none';
+                } else {
+                    details.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
